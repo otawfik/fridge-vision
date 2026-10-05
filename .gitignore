@@ -1,0 +1,19 @@
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# data (large / regenerable)
+data/freshness_sample/
+*.pt
+
+# local run artifacts
+uploads/
+*.log
+
+# os / editors
+.DS_Store
+.idea/
+.vscode/
