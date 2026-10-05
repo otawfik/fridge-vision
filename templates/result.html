@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fridge Vision results</title>
+<style>
+  body { font-family: -apple-system, Segoe UI, Roboto, sans-serif; max-width: 860px; margin: 32px auto; padding: 0 20px; color: #1c1c1e; background: #f7f8fa; }
+  .card { background: #fff; border-radius: 14px; padding: 24px; box-shadow: 0 2px 12px rgba(0,0,0,.06); margin-bottom: 20px; }
+  img.photo { width: 100%; border-radius: 10px; }
+  table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+  th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid #eee; font-size: .95rem; }
+  th { color: #666; font-weight: 600; }
+  .bar { height: 8px; border-radius: 4px; background: #eee; width: 110px; display: inline-block; vertical-align: middle; }
+  .bar > span { display: block; height: 8px; border-radius: 4px; }
+  .pill { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: .8rem; font-weight: 600; }
+  .fresh { background: #e6f9ee; color: #1e8449; } .spoiled { background: #fdecea; color: #c0392b; }
+  .soon { background: #fef5e7; color: #b9770e; } .ok { background: #eaf2f8; color: #2471a3; }
+  .recipe { border: 1px solid #eee; border-radius: 10px; padding: 14px 16px; margin: 10px 0; }
+  .recipe h4 { margin: 0 0 6px; } .recipe p { margin: 4px 0; color: #444; font-size: .92rem; }
+  a.btn { display: inline-block; background: #2ecc71; color: #fff; border-radius: 10px; padding: 10px 24px; text-decoration: none; }
+  .empty { color: #777; }
+</style>
+</head>
+<body>
+<div class="card">
+  <h2>&#129716; What is in your fridge</h2>
+  <p>{{ n_detections }} item{{ "s" if n_detections != 1 }} detected.</p>
+  <img class="photo" src="{{ annotated }}" alt="annotated fridge photo">
+</div>
+<div class="card">
+  <h2>Inventory <span style="font-weight:400;font-size:.9rem;color:#777">(use-soon-first)</span></h2>
+  {% if inventory %}
+  <table>
+    <tr><th>Item</th><th>Qty</th><th>Freshness</th><th>Days left</th><th>Tip</th></tr>
+    {% for row in inventory %}
+    <tr>
+      <td><b>{{ row.item }}</b>{% if row.ready_to_eat %} <span class="pill ok">ready to eat</span>{% endif %}</td>
+      <td>{{ row.count }}</td>
+      <td>
+        <span class="bar"><span style="width:{{ (row.freshness*100)|round }}%;background:{% if row.freshness >= 0.5 %}#2ecc71{% else %}#e74c3c{% endif %}"></span></span>
+        <span class="pill {{ row.freshness_label }}">{{ (row.freshness*100)|round }}%</span>
+      </td>
+      <td><span class="pill {{ 'soon' if row.days_left <= 3 else 'ok' }}">{{ row.days_left }}d</span></td>
+      <td style="color:#555">{{ row.tip }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  {% else %}
+  <p class="empty">No fridge items detected. Try a clearer, well-lit photo.</p>
+  {% endif %}
+</div>
+<div class="card">
+  <h2>Recipes for what you have</h2>
+  {% if recipes %}
+    {% for recipe, score in recipes %}
+    <div class="recipe">
+      <h4>{{ recipe.title }} <span style="color:#888;font-weight:400;font-size:.85rem">{{ recipe.time_min }} min</span></h4>
+      <p><b>Needs:</b> {{ recipe.ingredients | join(", ") }}</p>
+      <p>{{ recipe.steps[0] }}{% if recipe.steps|length > 1 %} ... ({{ recipe.steps|length }} steps){% endif %}</p>
+    </div>
+    {% endfor %}
+  {% else %}
+  <p class="empty">No recipes match the detected items yet.</p>
+  {% endif %}
+</div>
+<a class="btn" href="/">Analyze another photo</a>
+</body>
+</html>
