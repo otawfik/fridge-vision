@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" font-family="Helvetica, Arial, sans-serif">
+<rect width="960" height="540" fill="#f7f9f7" rx="12"/>
+<rect x="0" y="0" width="960" height="64" fill="#1f2937" rx="12"/>
+<rect x="0" y="52" width="960" height="12" fill="#1f2937"/>
+<text x="28" y="40" fill="#ffffff" font-size="22" font-weight="bold">Fridge Vision</text>
+<text x="860" y="40" fill="#9ca3af" font-size="14">6 items detected</text>
+<rect x="24" y="88" width="560" height="428" fill="#eef2ee" rx="10" stroke="#d1d5db"/>
+<text x="44" y="116" fill="#374151" font-size="14" font-weight="bold">Annotated photo</text>
+<rect x="64" y="130" width="130" height="110" fill="#e74c3c" opacity="0.55" rx="8"/>
+<rect x="64" y="130" width="130" height="110" fill="none" stroke="#16a34a" stroke-width="2.5" rx="8"/>
+<rect x="64" y="130" width="92" height="20" fill="#16a34a" rx="4"/>
+<text x="72" y="144" fill="#ffffff" font-size="12" font-weight="bold">apple 0.94</text>
+<rect x="224" y="130" width="110" height="150" fill="#3498db" opacity="0.55" rx="8"/>
+<rect x="224" y="130" width="110" height="150" fill="none" stroke="#16a34a" stroke-width="2.5" rx="8"/>
+<rect x="224" y="130" width="84" height="20" fill="#16a34a" rx="4"/>
+<text x="232" y="144" fill="#ffffff" font-size="12" font-weight="bold">milk 0.91</text>
+<rect x="364" y="130" width="140" height="100" fill="#2ecc71" opacity="0.55" rx="8"/>
+<rect x="364" y="130" width="140" height="100" fill="none" stroke="#16a34a" stroke-width="2.5" rx="8"/>
+<rect x="364" y="130" width="108" height="20" fill="#16a34a" rx="4"/>
+<text x="372" y="144" fill="#ffffff" font-size="12" font-weight="bold">lettuce 0.87</text>
+<rect x="64" y="270" width="150" height="120" fill="#f39c12" opacity="0.55" rx="8"/>
+<rect x="64" y="270" width="150" height="120" fill="none" stroke="#16a34a" stroke-width="2.5" rx="8"/>
+<rect x="64" y="270" width="100" height="20" fill="#16a34a" rx="4"/>
+<text x="72" y="284" fill="#ffffff" font-size="12" font-weight="bold">yogurt 0.83</text>
+<rect x="244" y="310" width="120" height="110" fill="#f5f0e1" opacity="0.55" rx="8"/>
+<rect x="244" y="310" width="120" height="110" fill="none" stroke="#16a34a" stroke-width="2.5" rx="8"/>
+<rect x="244" y="310" width="84" height="20" fill="#16a34a" rx="4"/>
+<text x="252" y="324" fill="#ffffff" font-size="12" font-weight="bold">eggs 0.89</text>
+<rect x="394" y="260" width="110" height="160" fill="#f1c40f" opacity="0.55" rx="8"/>
+<rect x="394" y="260" width="110" height="160" fill="none" stroke="#16a34a" stroke-width="2.5" rx="8"/>
+<rect x="394" y="260" width="100" height="20" fill="#16a34a" rx="4"/>
+<text x="402" y="274" fill="#ffffff" font-size="12" font-weight="bold">cheese 0.81</text>
+<rect x="608" y="88" width="328" height="250" fill="#ffffff" rx="10" stroke="#d1d5db"/>
+<text x="628" y="116" fill="#374151" font-size="14" font-weight="bold">INVENTORY (use-soon-first)</text>
+<text x="628" y="142" fill="#111827" font-size="13">apple <tspan fill="#6b7280">x4</tspan></text>
+<text x="880" y="142" fill="#374151" font-size="12" text-anchor="end">fresh 96%</text>
+<rect x="628" y="148" width="120" height="7" fill="#e5e7eb" rx="3.5"/>
+<rect x="628" y="148" width="115" height="7" fill="#2ecc71" rx="3.5"/>
+<text x="628" y="186" fill="#111827" font-size="13">milk <tspan fill="#6b7280">x6</tspan></text>
+<text x="880" y="186" fill="#374151" font-size="12" text-anchor="end">fresh 93%</text>
+<rect x="628" y="192" width="120" height="7" fill="#e5e7eb" rx="3.5"/>
+<rect x="628" y="192" width="115" height="7" fill="#2ecc71" rx="3.5"/>
+<text x="628" y="230" fill="#111827" font-size="13">lettuce <tspan fill="#6b7280">x2</tspan></text>
+<text x="880" y="230" fill="#374151" font-size="12" text-anchor="end">2d left</text>
+<rect x="628" y="236" width="120" height="7" fill="#e5e7eb" rx="3.5"/>
+<rect x="628" y="236" width="66" height="7" fill="#f0ad4e" rx="3.5"/>
+<text x="628" y="274" fill="#111827" font-size="13">yogurt <tspan fill="#6b7280">x1</tspan></text>
+<text x="880" y="274" fill="#374151" font-size="12" text-anchor="end">1d left</text>
+<rect x="628" y="280" width="120" height="7" fill="#e5e7eb" rx="3.5"/>
+<rect x="628" y="280" width="36" height="7" fill="#e74c3c" rx="3.5"/>
+<rect x="608" y="354" width="328" height="162" fill="#fffbeb" rx="10" stroke="#f0ad4e"/>
+<text x="628" y="382" fill="#374151" font-size="14" font-weight="bold">RECIPES FOR WHAT YOU HAVE</text>
+<text x="628" y="408" fill="#111827" font-size="13">* Apple walnut salad <tspan fill="#6b7280">(15 min)</tspan></text>
+<text x="628" y="436" fill="#111827" font-size="13">* Veggie omelette <tspan fill="#6b7280">(10 min)</tspan></text>
+<text x="628" y="464" fill="#111827" font-size="13">* Yogurt parfait <tspan fill="#6b7280">(5 min)</tspan></text>
+</svg>
