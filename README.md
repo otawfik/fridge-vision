@@ -1,8 +1,12 @@
 # Fridge Vision
 
+[![tests](https://github.com/otawfik/fridge-vision/actions/workflows/ci.yml/badge.svg)](https://github.com/otawfik/fridge-vision/actions/workflows/ci.yml)
+
 Snap a photo of your fridge. Fridge Vision tells you what is inside, how fresh it is, and what to cook with it.
 
-![Fridge Vision demo](screenshots/demo.svg)
+![Fridge Vision detecting 23 items in a real fridge photo with YOLOv8](screenshots/app.jpg)
+
+*Real output on [a fridge photo by Candeadly](https://commons.wikimedia.org/wiki/File:Inside_of_double_sided_refrigerator.jpg) (CC BY 4.0).*
 
 ## What it does
 
@@ -85,12 +89,6 @@ fridge-vision/
 ## Tech stack
 
 Python, YOLOv8 (Ultralytics), scikit-learn, Flask, Pillow, numpy, matplotlib, pytest.
-
-## Resume bullets
-
-- Built a computer vision app that detects fridge contents with YOLOv8 (19 items in the demo photo) and scores produce freshness with a logistic regression classifier (44 handcrafted color/texture features) trained on 1,200 fresh-vs-rotten produce photos, achieving 97.5% accuracy on a held-out test set.
-- Shipped an end-to-end Flask demo: photo upload, annotated detections, use-soon-first inventory with shelf-life estimates, and TF-IDF recipe recommendations from detected ingredients.
-- Engineered a JSON-serialized model artifact so inference runs on numpy alone, with a pytest suite covering features, inventory logic, recommendations, and the web UI.
 
 ## License
 
