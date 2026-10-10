@@ -17,3 +17,6 @@ uploads/
 .DS_Store
 .idea/
 .vscode/
+.pytest_cache/
+*.pyc
+.env
